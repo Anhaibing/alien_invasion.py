@@ -21,11 +21,12 @@ def run_game():
 	#创建一个用于存储子弹的编组
 	bullets = Group()
 
-	#cycle
+	#cycle for game
 	while True:
 		gf.check_events(ai_settings, screen, ship, bullets)
 		ship.update()
 		bullets.update()
+		update_bullets(bullets)
 		gf.update_screen(ai_settings, screen, ship, bullets)
 
 run_game()
